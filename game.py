@@ -46,6 +46,7 @@ def main():
             break
         elif game.is_board_full():
             print('Ничья!')
+            save_result()
             break
         current_player = 'O' if current_player == 'X' else 'X'
 

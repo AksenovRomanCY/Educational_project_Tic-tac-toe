@@ -1,5 +1,6 @@
 from gameparts.parts import Board
 from gameparts.exceptions import FieldIndexError, CellOccupiedError
+from  file_actions import save_result
 
 
 def main():
@@ -41,6 +42,7 @@ def main():
         game.display()
         if game.check_win(current_player):
             print(f'Победили {current_player}.')
+            save_result(current_player)
             break
         elif game.is_board_full():
             print('Ничья!')
